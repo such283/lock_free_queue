@@ -122,7 +122,6 @@ private:
                                                std::memory_order_relaxed));
         old_counter.external_count = new_counter.external_count;
     }
-
     static void free_external_counter(counted_node_ptr& old_node_ptr) {
         node* const ptr = old_node_ptr.ptr;
         int const count_increase = old_node_ptr.external_count - 2;
